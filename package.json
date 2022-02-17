@@ -2,10 +2,10 @@
   "name": "mattermost-client",
   "version": "6.4.2",
   "description": "Mattermost client",
-  "module": "./src/client.js",
-  "main": "dist/mattermost-client.js",
+  "module": "src/client.js",
+  "main": "src/client.js",
   "files": [
-    "/dist"
+    "src/*"
   ],
   "scripts": {
     "test": "jest",

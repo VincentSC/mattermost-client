@@ -177,7 +177,11 @@ class Client extends EventEmitter {
             this.emit('preferencesLoaded', data);
             return this.logger.info('Loaded Preferences...');
         }
-        this.logger.error('Failed to load Preferences... %j', data.error);
+        if (!data) {
+            this.logger.error('Failed to load Preferences... data empty');
+        } else {
+            this.logger.error('Failed to load Preferences... %j', data.error);
+        }
         return this.reconnect();
     }
 
